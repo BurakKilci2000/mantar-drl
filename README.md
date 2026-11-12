@@ -37,6 +37,15 @@ Gymnasium arayüzünün parçası olan `reset`, `step`, `action_space`, `observa
 
 Eğitim ve değerlendirme kayıtları `runs/` klasörüne yazılır; bu klasör depoya eklenmez.
 
+## Hızlı başlangıç
+
+```
+python -m rakipler.ayarlanmis_kural          # ayarlanmış kuralın parametreleri (≈10 dk)
+python egit.py --tur istiridye --tohum 0     # PPO eğitimi (200 bin adım ≈4 dk, CPU)
+python degerlendir.py                        # bütün yöntemler × 3 tür × 5 test tohumu
+python -m betikler.duman_karsilastir         # simülasyon süreleri ↔ Duman 2024 gerçek veri
+```
+
 ## Kurulum ve çalıştırma
 
 Ayrıntılı adımlar için: [04_Kurulum/README.md](04_Kurulum/README.md)
@@ -44,7 +53,7 @@ Ayrıntılı adımlar için: [04_Kurulum/README.md](04_Kurulum/README.md)
 ## Durum
 
 - [~] K1 · Simülasyon ortamı (sürüm 0.2: üç tür; parametre kaynakları belgeler/parametre_kaynaklari.md)
-- [ ] K2 · Eğitim ve değerlendirme hattı
-- [~] K3 · Karşılaştırma modülü (sabit reçete hazır)
+- [~] K2 · Eğitim ve değerlendirme hattı (egit.py ve degerlendir.py çalışıyor; istiridyede 200 bin adımlık PPO ön denemesi)
+- [x] K3 · Karşılaştırma modülü (sabit reçete, kural tabanlı, ayarlanmış kural; sonuçlar: belgeler/hafta07/)
 - [ ] K4 · Raporlama modülü
 - [ ] K5 · Etkileşimli arayüz

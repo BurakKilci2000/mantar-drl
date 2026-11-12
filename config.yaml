@@ -198,10 +198,15 @@ eylem_sinirlari:               # ajanın verebileceği ayar noktası aralıklar�
   bagil_nem: [60.0, 98.0]
   co2_ppm: [500.0, 8000.0]
 
-egitim:                        # K2'de doldurulacak
+egitim:                        # PPO; SB3 varsayılanlarına yakın başlangıç değerleri (7. hafta ön deneme)
   algoritma: ppo
-  toplam_adim: null
-  ogrenme_orani: null
-  gamma: null
-  gae_lambda: null
-  clip_eps: null
+  toplam_adim: 200000          # ön deneme; asıl deneyler için artırılacak
+  ogrenme_orani: 0.0003
+  n_steps: 2048
+  batch_size: 64
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_eps: 0.2
+  ent_coef: 0.0
+  tur: varsayim
