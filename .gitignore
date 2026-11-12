@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Sanal ortam
+.venv/
+venv/
+
+# Gizli ayarlar (yalnızca .env.example depoya girer)
+.env
+
+# Deney çıktıları ve model ağırlıkları
+runs/
+*.pt
+*.pth
+
+# Editör ve işletim sistemi dosyaları
+.idea/
+.vscode/
+.ipynb_checkpoints/
+Thumbs.db
+.DS_Store
