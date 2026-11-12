@@ -10,7 +10,7 @@ Kurallar gunluk ortalamalar uzerinden, seffaf ve elle dogrulanabilir sekilde:
 Otomatik tarihler yanlis gorunurse asagidaki ELLE sozlugune tarih yazilarak degistirilebilir.
 
 Kullanim (mantar-drl klasorunden):
-    python scripts\\evre_etiketle.py "D:\\...\\duman2024_oyster\\Sensor Data"
+    python betikler\\evre_etiketle.py "D:\\...\\duman2024_oyster\\Sensor Data"
 
 Ciktilar (temiz\\ klasorune):
     evreler.csv             her dongu icin evre baslangic/bitis tarihleri
@@ -23,7 +23,7 @@ from pathlib import Path
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from data.duman2024 import ana_seriler, temiz_oku  # noqa: E402
+from veri.duman2024 import ana_seriler, temiz_oku  # noqa: E402
 
 SOK_DUSUS = 4.0     # °C
 MEYVE_FARK = 2.0    # °C
@@ -68,7 +68,7 @@ def evreleri_bul(g: pd.DataFrame) -> dict[str, pd.Timestamp]:
     return bulunan
 
 
-def main():
+def calistir():
     if len(sys.argv) < 2:
         print(__doc__)
         sys.exit(1)
@@ -114,4 +114,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    calistir()

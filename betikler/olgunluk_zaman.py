@@ -6,7 +6,7 @@ COCO Format klasorundeki her JSON bir goruntuye ait; dosya adi goruntunun cekild
 olgun ve olgun olmayan mantar sayisini cikarir, zamana dizer, gunluk ozet ve grafik uretir.
 
 Kullanim (mantar-drl klasorunden):
-    python scripts\\olgunluk_zaman.py "D:\\...\\duman2024_oyster"
+    python betikler\\olgunluk_zaman.py "D:\\...\\duman2024_oyster"
 
 Ciktilar (Sensor Data\\temiz\\ klasorune):
     olgunluk_goruntu.csv   goruntu basina sayimlar
@@ -76,7 +76,7 @@ def json_say(yol: Path) -> tuple[dict, list]:
     return sayim, adlar
 
 
-def main():
+def calistir():
     if len(sys.argv) < 2:
         print(__doc__)
         sys.exit(1)
@@ -150,4 +150,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    calistir()

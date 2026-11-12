@@ -3,7 +3,7 @@ Hafta 6 - yardimci: Bir Excel/CSV dosyasinda sayiya cevrilemeyen degerlerin
 neye benzedigini gosterir (repr ile; gizli karakterler de gorunur).
 
 Kullanim:
-    python scripts\\sayi_olmayanlar.py "D:\\...\\DS Temp - ESP8266.xlsx"
+    python betikler\\sayi_olmayanlar.py "D:\\...\\DS Temp - ESP8266.xlsx"
 """
 import sys
 from pathlib import Path
@@ -11,7 +11,7 @@ from pathlib import Path
 import pandas as pd
 
 
-def main():
+def calistir():
     if len(sys.argv) < 2:
         print(__doc__)
         sys.exit(1)
@@ -42,4 +42,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    calistir()

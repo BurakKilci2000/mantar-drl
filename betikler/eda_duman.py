@@ -5,7 +5,7 @@ Girdi : Sensor Data\\temiz\\cycle1_5dk.csv, cycle2_5dk.csv  (temizle_duman.py ci
 Cikti : Sensor Data\\temiz\\grafikler\\*.png  ve  eda_ozet.csv
 
 Kullanim (mantar-drl klasorunden):
-    python scripts\\eda_duman.py "D:\\...\\duman2024_oyster\\Sensor Data"
+    python betikler\\eda_duman.py "D:\\...\\duman2024_oyster\\Sensor Data"
 
 Gerekli paket: matplotlib  (pip install matplotlib)
 """
@@ -33,7 +33,7 @@ ONCELIK = {
 }
 DOSYA = {"Cycle I": "cycle1_5dk.csv", "Cycle II": "cycle2_5dk.csv"}
 
-# Istiridye meyvelenme bandi: mushroom_env/config.yaml'daki istiridye degerleriyle ESITLE.
+# Istiridye meyvelenme bandi: config.yaml'daki istiridye degerleriyle ESITLE.
 BANT_T = (12.0, 20.0)
 BANT_RH = (85.0, 95.0)
 
@@ -89,7 +89,7 @@ def zaman_serisi_ciz(df: pd.DataFrame, dongu: str, klasor: Path):
     print("  grafik:", yol.name)
 
 
-def main():
+def calistir():
     if len(sys.argv) < 2:
         print(__doc__)
         sys.exit(1)
@@ -181,4 +181,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    calistir()

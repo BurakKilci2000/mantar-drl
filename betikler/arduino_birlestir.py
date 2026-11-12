@@ -10,7 +10,7 @@ Sonuclari 'islenmis' klasorune yazar:
     islenmis/arduino_ozet.csv               (dosya basina ozet)
 
 Kullanim (mantar-drl klasorunden):
-    python scripts\\arduino_birlestir.py "D:\\...\\Sensor Data\\Cycle I\\Arduino IoT Cloud Data"
+    python betikler\\arduino_birlestir.py "D:\\...\\Sensor Data\\Cycle I\\Arduino IoT Cloud Data"
 """
 import io
 import re
@@ -52,7 +52,7 @@ def csv_oku(ham: bytes) -> pd.DataFrame:
     return df
 
 
-def main():
+def calistir():
     if len(sys.argv) < 2:
         print(__doc__)
         sys.exit(1)
@@ -114,4 +114,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    calistir()

@@ -21,3 +21,5 @@ runs/
 .ipynb_checkpoints/
 Thumbs.db
 .DS_Store
+*.zip
+*.rar

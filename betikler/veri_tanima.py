@@ -68,7 +68,7 @@ def ozet(yol: Path, df: pd.DataFrame) -> list[dict]:
     return satirlar
 
 
-def main():
+def calistir():
     if len(sys.argv) < 2:
         print(__doc__)
         sys.exit(1)
@@ -109,4 +109,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    calistir()

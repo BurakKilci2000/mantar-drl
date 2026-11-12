@@ -41,7 +41,7 @@ Ardından `.env` dosyasındaki değerleri gerekirse düzenleyin. `.env` depoya e
 Bu bölüm modüller tamamlandıkça güncellenecektir.
 
 ```
-python -m scripts.demo_sabit_recete shiitake   # duman testi (istiridye | shiitake | aslan_yelesi) + grafik (runs/demo/)
-python train.py                       # eğitim (yazılacak)
-python evaluate.py                    # değerlendirme (yazılacak)
+python -m betikler.demo_sabit_recete shiitake   # duman testi (istiridye | shiitake | aslan_yelesi) + grafik (runs/demo/)
+python egit.py                        # eğitim (yazılacak)
+python degerlendir.py                 # değerlendirme (yazılacak)
 ```

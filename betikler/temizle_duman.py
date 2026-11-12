@@ -4,7 +4,7 @@ Hafta 6 - Adim 2: Duman 2024 sensor verisini temizler ve 5 dakikalik tabloya ind
 Once arduino_birlestir.py calistirilmis olmali (Cycle I icin islenmis/ klasoru).
 
 Kullanim (mantar-drl klasorunden):
-    python scripts\\temizle_duman.py "D:\\...\\duman2024_oyster\\Sensor Data"
+    python betikler\\temizle_duman.py "D:\\...\\duman2024_oyster\\Sensor Data"
 
 Ciktilar (Sensor Data\\temiz\\ klasorune):
     cycle1_5dk.csv, cycle2_5dk.csv   temiz, 5 dakikalik tablolar
@@ -16,7 +16,7 @@ from pathlib import Path
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))   # mantar-drl kok klasoru
-from data.duman2024 import donguyu_temizle  # noqa: E402
+from veri.duman2024 import donguyu_temizle  # noqa: E402
 
 DONGULER = {
     "Cycle I": {"cikti": "cycle1_5dk.csv", "bitis": "2023-03-02T08:33:51Z"},  # Notes & drops.txt
@@ -24,7 +24,7 @@ DONGULER = {
 }
 
 
-def main():
+def calistir():
     if len(sys.argv) < 2:
         print(__doc__)
         sys.exit(1)
@@ -52,4 +52,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    calistir()

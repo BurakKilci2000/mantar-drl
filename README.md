@@ -17,17 +17,23 @@ Ajan; sabit reçete + PID, kural tabanlı kontrolcü ve eşikleri validation sen
 ```
 mantar-drl/
 ├── 04_Kurulum/        Kurulum adımları (README.md) ve sürümleri sabitlenmiş requirements.txt
-├── mushroom_env/      K1 · Simülasyon ortamı (Gymnasium): oda iklimi, substrat, biyoloji, kaynak alt modelleri
-├── agents/            K2 · PPO (ve hedeflenen SAC) ajanı
-├── baselines/         K3 · Sabit reçete + PID, kural tabanlı ve ayarlanmış kural kontrolcüleri
-├── reporting/         K4 · Kayıtlardan grafik ve özet tablo üreten betikler
-├── app/               K5 · Streamlit arayüzü
-├── docs/              Literatür özeti, yöntem dokümanı ve raporlar
+├── mantar_ortami/     K1 · Simülasyon ortamı (Gymnasium): oda iklimi, substrat, biyoloji, kaynak alt modelleri
+├── ajanlar/           K2 · PPO (ve hedeflenen SAC) ajanı
+├── rakipler/          K3 · Sabit reçete + PID, kural tabanlı ve ayarlanmış kural kontrolcüleri
+├── raporlama/         K4 · Kayıtlardan grafik ve özet tablo üreten betikler
+├── arayuz/            K5 · Streamlit arayüzü
+├── veri/              Gerçek veri setlerini okuyan ve temizleyen modüller (Duman 2024)
+├── betikler/          Tek seferlik çalıştırılan betikler (veri temizleme, EDA, demo)
+├── belgeler/          Literatür özeti, yöntem dokümanı ve raporlar
 ├── config.yaml        Tüm parametreler ve kaynakları (kodda sabit değer bulunmaz)
 ├── seeds.txt          Deneylerde kullanılan rastgele tohumlar
-├── train.py           Eğitim betiği
-└── evaluate.py        Değerlendirme betiği
+├── egit.py            Eğitim betiği
+└── degerlendir.py     Değerlendirme betiği
 ```
+
+Kodda sınıf, fonksiyon ve değişken adları Türkçedir (ASCII harflerle: ı→i, ş→s, ğ→g, ü→u, ö→o, ç→c).
+Gymnasium arayüzünün parçası olan `reset`, `step`, `action_space`, `observation_space`, `metadata`,
+`np_random`, `terminated`, `truncated` adları kütüphane tarafından çağrıldığı için İngilizce kalır.
 
 Eğitim ve değerlendirme kayıtları `runs/` klasörüne yazılır; bu klasör depoya eklenmez.
 
@@ -37,7 +43,7 @@ Ayrıntılı adımlar için: [04_Kurulum/README.md](04_Kurulum/README.md)
 
 ## Durum
 
-- [~] K1 · Simülasyon ortamı (sürüm 0.2: üç tür; parametre kaynakları docs/parametre_kaynaklari.md)
+- [~] K1 · Simülasyon ortamı (sürüm 0.2: üç tür; parametre kaynakları belgeler/parametre_kaynaklari.md)
 - [ ] K2 · Eğitim ve değerlendirme hattı
 - [~] K3 · Karşılaştırma modülü (sabit reçete hazır)
 - [ ] K4 · Raporlama modülü

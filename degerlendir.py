@@ -5,4 +5,4 @@ sonuçları sonuclar.csv'ye yaz.
 """
 
 if __name__ == "__main__":
-    print("evaluate.py henüz yazılmadı.")
+    print("degerlendir.py henüz yazılmadı.")

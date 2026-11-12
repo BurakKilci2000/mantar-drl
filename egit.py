@@ -5,4 +5,4 @@ kayıtları runs/<deney>/<tür>/<tohum>/ altına yaz (yöntem dokümanı, Tablo 
 """
 
 if __name__ == "__main__":
-    print("train.py henüz yazılmadı.")
+    print("egit.py henüz yazılmadı.")
