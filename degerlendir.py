@@ -49,6 +49,7 @@ OLCUTLER = {   # sütun → tablodaki başlık
 
 
 def bolum_calistir(ortam, politika, tohum: int) -> dict:
+    politika.sifirla(tohum)
     gozlem, _ = ortam.reset(seed=tohum)
     odul, kazanc, bitti = 0.0, 0.0, False
     while not bitti:

@@ -1,1 +1,4 @@
-"""K4 · Raporlama: runs/ altındaki kayıtlardan grafik ve tohum × ölçüt özet tablosu üretir."""
+"""K4 · Raporlama: bölüm kayıtları, grafikler ve özet tablolar.
+
+    bolum_kaydi.py  bir döngüyü adım adım tabloya döker (arayüz bunu kullanır)
+"""

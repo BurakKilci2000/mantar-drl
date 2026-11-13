@@ -3,6 +3,7 @@
 from pathlib import Path
 
 from stable_baselines3 import PPO
+from stable_baselines3.common.utils import set_random_seed
 
 from rakipler.politika import Politika
 from .sarmalayici import duz_eylemi_coz
@@ -18,6 +19,9 @@ class PPOAjani(Politika):
     def __init__(self, model_yolu: str | Path, belirlenimci: bool = False):
         self.model = PPO.load(str(model_yolu), device="cpu")
         self.belirlenimci = belirlenimci
+
+    def sifirla(self, tohum: int) -> None:
+        set_random_seed(tohum)          # örneklemeli eylemler her çalıştırmada aynı olsun
 
     def eylem_sec(self, gozlem):
         eylem, _ = self.model.predict(gozlem, deterministic=self.belirlenimci)
